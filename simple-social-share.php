@@ -50,10 +50,10 @@ class simple_social_share{
 
 		wp_enqueue_style( 'simple-social-share-main', plugins_url('css/style.css',__FILE__) );
 		
-		if( in_array('360-rotation', $s3_options['ss-select-animations']) && $s3_options['ss-select-style'] != 'horizontal-with-count' )
+		if( !empty($s3_options['ss-select-animations']) && in_array('360-rotation', $s3_options['ss-select-animations']) && $s3_options['ss-select-style'] != 'horizontal-with-count' )
 		wp_enqueue_style( '360-rotation', plugins_url('css/360-rotate.css',__FILE__) );
 		
-		if( in_array('tooltip', $s3_options['ss-select-animations']) && $s3_options['ss-select-style'] != 'horizontal-with-count' ){
+		if( !empty($s3_options['ss-select-animations']) && in_array('tooltip', $s3_options['ss-select-animations']) && $s3_options['ss-select-style'] != 'horizontal-with-count' ){
 			wp_enqueue_style( 'tooltipster-css', plugins_url('css/tooltipster.css',__FILE__) );
 			wp_enqueue_script( 'tooltipster-js', plugins_url('js/jquery.tooltipster.js',__FILE__), array('jquery') );
 		}		
@@ -74,7 +74,7 @@ class simple_social_share{
 
 		}
 
-		if( in_array('tooltip', $s3_options['ss-select-animations']) && $s3_options['ss-select-style'] != 'horizontal-with-count' && $s3_options['ss-select-style'] != 'small-buttons' ){
+		if( !empty($s3_options['ss-select-animations']) && in_array('tooltip', $s3_options['ss-select-animations']) && $s3_options['ss-select-style'] != 'horizontal-with-count' && $s3_options['ss-select-style'] != 'small-buttons' ){
 			?>
 			<script>
 				jQuery(document).ready(function($) {

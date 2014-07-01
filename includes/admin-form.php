@@ -74,10 +74,10 @@ function admin_form( $s3_options ){
 			<tr class="tr-select-animation">
 				<th><label for="ss-select-animations">Select Animations</label></th>
 				<td>
-					<input type="checkbox" name="s3_options[ss-select-animations][]" value="tooltip" <?php checked( in_array( 'tooltip', $s3_options['ss-select-animations'] ) ); ?>>
+					<input type="checkbox" name="s3_options[ss-select-animations][]" value="tooltip" <?php checked( (!empty($s3_options['ss-select-animations']) && in_array( 'tooltip', $s3_options['ss-select-animations'] )) ); ?>>
 					Tooltip Animation
 					<br>
-					<input type="checkbox" name="s3_options[ss-select-animations][]" value="360-rotation" <?php checked( in_array( '360-rotation', $s3_options['ss-select-animations'] ) ); ?>>
+					<input type="checkbox" name="s3_options[ss-select-animations][]" value="360-rotation" <?php checked( (!empty($s3_options['ss-select-animations']) && in_array( '360-rotation', $s3_options['ss-select-animations'] )) ); ?>>
 					360d Rotation <small><em>(Looks good only for circular icons)</em></small>
 				</td>
 			</tr>

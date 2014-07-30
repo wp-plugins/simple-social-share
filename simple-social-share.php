@@ -101,9 +101,9 @@ class simple_social_share{
 
 		$s3_options = get_option('s3_options');
 		$s3_html_markup = $this->s3_html_markup();
-		if( in_array('before-content', $s3_options['ss-select-position']) )
+		if( in_array('before-content', (array)$s3_options['ss-select-position']) )
 			$content = $s3_html_markup.$content;
-		if( in_array('after-content', $s3_options['ss-select-position']) )
+		if( in_array('after-content', (array)$s3_options['ss-select-position']) )
 			$content .= $s3_html_markup;
 		return $content;
 
@@ -113,13 +113,13 @@ class simple_social_share{
 		
 		$s3_options = get_option('s3_options');
 
-		if( is_home() && !in_array( 'home', $s3_options['ss-show-on'] ) )
+		if( is_home() && !in_array( 'home', (array)$s3_options['ss-show-on'] ) )
 			return '';
-		if( is_single() && !in_array( 'posts', $s3_options['ss-show-on'] ) )
+		if( is_single() && !in_array( 'posts', (array)$s3_options['ss-show-on'] ) )
 			return '';
-		if( is_page() && !in_array( 'pages', $s3_options['ss-show-on'] ) )
+		if( is_page() && !in_array( 'pages', (array)$s3_options['ss-show-on'] ) )
 			return '';
-		if( is_archive() && !in_array( 'archive', $s3_options['ss-show-on'] ) )
+		if( is_archive() && !in_array( 'archive', (array)$s3_options['ss-show-on'] ) )
 			return '';
 
 		if( $s3_options['ss-select-style'] == 'horizontal-with-count' ){
@@ -151,7 +151,7 @@ class simple_social_share{
 
 		$html_markup = '';
 		foreach ($service_markup_arr as $key => $value) {
-			if( in_array($key, $s3_options['ss-selected-services']) ){
+			if( in_array($key, (array)$s3_options['ss-selected-services']) ){
 				$html_markup .= $value;
 			}
 		}

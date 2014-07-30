@@ -33,7 +33,7 @@ function admin_form( $s3_options ){
 					<?php 
 						foreach ($s3_options['ss-available-services'] as $service) {
 							?>
-							<input type="checkbox" name="s3_options[ss-selected-services][]" value="<?php echo $service ; ?>" <?php checked( in_array( $service, $s3_options['ss-selected-services'] ) ); ?> /> <?php echo $service; ?>
+							<input type="checkbox" name="s3_options[ss-selected-services][]" value="<?php echo $service ; ?>" <?php checked( in_array( $service, (array)$s3_options['ss-selected-services'] ) ); ?> /> <?php echo $service; ?>
 							<input type="hidden" name="s3_options[ss-available-services][]" value="<?php echo $service ; ?>" />
 							<br>
 							<?php
@@ -44,10 +44,10 @@ function admin_form( $s3_options ){
 			<tr>
 				<th><label for="ss-select-postion">Select Position</label></th>
 				<td>
-					<input type="checkbox" name="s3_options[ss-select-position][]" value="before-content" <?php checked( in_array( 'before-content', $s3_options['ss-select-position'] ) ); ?>>
+					<input type="checkbox" name="s3_options[ss-select-position][]" value="before-content" <?php checked( in_array( 'before-content', (array)$s3_options['ss-select-position'] ) ); ?>>
 					Before Content
 					<br>
-					<input type="checkbox" name="s3_options[ss-select-position][]" value="after-content" <?php checked( in_array( 'after-content', $s3_options['ss-select-position'] ) ); ?>>
+					<input type="checkbox" name="s3_options[ss-select-position][]" value="after-content" <?php checked( in_array( 'after-content', (array)$s3_options['ss-select-position'] ) ); ?>>
 					After Content
 					<br/>
 					<p>
@@ -58,16 +58,16 @@ function admin_form( $s3_options ){
 			<tr>
 				<th><label for="ss-select-postion">Show on</label></th>
 				<td>
-					<input type="checkbox" name="s3_options[ss-show-on][]" value="home" <?php checked( in_array( 'home', $s3_options['ss-show-on'] ) ); ?>>
+					<input type="checkbox" name="s3_options[ss-show-on][]" value="home" <?php checked( in_array( 'home', (array)$s3_options['ss-show-on'] ) ); ?>>
 					Home Page
 					<br>
-					<input type="checkbox" name="s3_options[ss-show-on][]" value="pages" <?php checked( in_array( 'pages', $s3_options['ss-show-on'] ) ); ?>>
+					<input type="checkbox" name="s3_options[ss-show-on][]" value="pages" <?php checked( in_array( 'pages', (array)$s3_options['ss-show-on'] ) ); ?>>
 					Pages
 					<br>
-					<input type="checkbox" name="s3_options[ss-show-on][]" value="posts" <?php checked( in_array( 'posts', $s3_options['ss-show-on'] ) ); ?>>
+					<input type="checkbox" name="s3_options[ss-show-on][]" value="posts" <?php checked( in_array( 'posts', (array)$s3_options['ss-show-on'] ) ); ?>>
 					Posts
 					<br/>
-					<input type="checkbox" name="s3_options[ss-show-on][]" value="archive" <?php checked( in_array( 'archive', $s3_options['ss-show-on'] ) ); ?>>
+					<input type="checkbox" name="s3_options[ss-show-on][]" value="archive" <?php checked( in_array( 'archive', (array)$s3_options['ss-show-on'] ) ); ?>>
 					Archives
 				</td>
 			</tr>

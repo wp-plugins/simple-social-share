@@ -2,7 +2,7 @@
 Contributors: perials.com
 Tags: social media, social media share, facebook share, twitter share, google plus, linkedin, reddit, stumbleupon, tumblr, simple social share, simple social sharing, social sharing
 Requires at least: 2.3
-Tested up to: 3.9.1
+Tested up to: 4.0
 Stable tag: 1.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

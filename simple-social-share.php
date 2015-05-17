@@ -3,7 +3,7 @@
  * Plugin Name: Simple social share
  * Plugin URI: http://perials.com
  * Description: A simple plugin for displaying social media icons to share Post/Page content
- * Version: 1.0
+ * Version: 2.0
  * Author: Perials
  * Author URI: http://perials.com
  * License: GPL2

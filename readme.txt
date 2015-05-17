@@ -2,8 +2,8 @@
 Contributors: perials.com
 Tags: social media, social media share, facebook share, twitter share, google plus, linkedin, reddit, stumbleupon, tumblr, simple social share, simple social sharing, social sharing
 Requires at least: 2.3
-Tested up to: 4.0
-Stable tag: 1.0
+Tested up to: 4.2.2
+Stable tag: 2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,4 +43,7 @@ If you have any questions, we'd love to hear from you. Email us: info@perials.co
 == Changelog ==
 
 = Simple Social Share v1.0 =
-* Added plugin to WordPress repository 
+* Added plugin to WordPress repository
+
+= Simple Social Share v2.0 =
+* Added Pinterest

@@ -88,7 +88,7 @@ class simple_social_share{
 	public function s3_load_defaults(){
 
 		$s3_options['ss-select-style'] = 'horizontal-w-c-circular';
-		$s3_options['ss-available-services'] = array('facebook', 'twitter', 'googleplus', 'digg', 'reddit', 'linkedin', 'stumbleupon', 'tumblr', 'email' );
+		$s3_options['ss-available-services'] = array('facebook', 'twitter', 'googleplus', 'digg', 'reddit', 'linkedin', 'stumbleupon', 'tumblr', 'pinterest', 'email' );
 		$s3_options['ss-selected-services'] = $s3_options['ss-available-services'];
 		$s3_options['ss-select-position'] = array('before-content');
 		$s3_options['ss-show-on'] = array('pages', 'posts');

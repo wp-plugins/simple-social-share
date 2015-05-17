@@ -30,7 +30,7 @@ function admin_form( $s3_options ){
 			<tr>
 				<th><label for="ss-select-style">Select services</label></th>
 				<td>
-					<?php 
+					<?php
 						foreach ($s3_options['ss-available-services'] as $service) {
 							?>
 							<input type="checkbox" name="s3_options[ss-selected-services][]" value="<?php echo $service ; ?>" <?php checked( in_array( $service, (array)$s3_options['ss-selected-services'] ) ); ?> /> <?php echo $service; ?>

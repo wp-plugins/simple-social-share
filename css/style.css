@@ -28,10 +28,12 @@ iframe.twitter-share-button #widget{ width: auto !important; display: inline-blo
 	background-image: url("../images/main-icon-set.gif");
 	margin-right: 4px;
 }
-.horizontal-w-c-r-border a{
+.horizontal-w-c-r-border a,
+.horizontal-w-c-r-border .pinit-btn-div {
 	border-radius: 5px;
 }
-.horizontal-w-c-circular a{
+.horizontal-w-c-circular a,
+.horizontal-w-c-circular .pinit-btn-div {
 	border-radius: 50%;
 	border-right: 2px;
 }
@@ -61,4 +63,19 @@ iframe.twitter-share-button #widget{ width: auto !important; display: inline-blo
 }
 .s-share-w-c a.s3-email{
 	background-position: 0 416px;
+}
+.s-share-w-c .pinit-btn-div{
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	background-image: url("../images/main-icon-set.gif");
+	background-position: 0 256px;
+	margin-right: 2px;
+}
+.s-share-w-c .pinit-btn-div a {
+	text-indent: -9999px;
+	background: none !important;
+	display: block !important;
+	width: 100% !important;
+	height: 100% !important;
 }

@@ -29,7 +29,8 @@ function get_services_js_arr( $s3_option = array() ){
 													    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(li, s);
 													  })();
 													</script>',
-								'tumblr' => ''
+								'tumblr' => '',
+								'pinterest' => ''
 							);
 	return $service_js_arr;
 }

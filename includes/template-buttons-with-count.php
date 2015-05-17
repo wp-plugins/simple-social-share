@@ -21,6 +21,10 @@ function get_buttons_with_c_markup_arr(){
 								'tumblr' => '<div class="s-single-share">
 												<a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url(\'http://platform.tumblr.com/v1/share_2.png\') top left no-repeat transparent;">Share on Tumblr</a>
 												</div>',
+								'pinterest' => '<div class="s-single-share">
+													<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+													<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+												</div>',
 								'email' => '<div class="s-single-share">
 												<a href="mailto:?Subject='.str_replace(' ', '%20', get_the_title()).'&Body='.str_replace(' ', '%20', 'Here is the link to the article: '.get_permalink()).'" title="Email" class="s3-email"><img src="'.plugins_url( '../images/share-email.png' , __FILE__ ).'"></a>
 											</div>'

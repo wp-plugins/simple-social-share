@@ -9,6 +9,8 @@ function get_buttons_w_c_markup_arr(){
 								'linkedin' => '<a href="http://www.linkedin.com/shareArticle?mini=true&url='.get_permalink().'" target="_blank" title="Share to LinkedIn" class="s3-linkedin hint--top"></a>',
 								'stumbleupon' => '<a href="http://www.stumbleupon.com/submit?url='.get_permalink().'&title='.get_the_title().'" target="_blank" title="Share to StumbleUpon" class="s3-stumbleupon hint--top"></a>',
 								'tumblr' => '<a href="http://www.tumblr.com/share/link?url='.urlencode(get_permalink()).'&name='.urlencode(get_the_title()).'" target="_blank" title="Share to Tumblr" class="s3-tumblr hint--top"></a>',
+								'pinterest' => '<div class="pinit-btn-div"><a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red" title="Share to Pinterest" class="s3-pinterest hint--top"></a></div>
+								<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>',
 								'email' => '<a href="mailto:?Subject='.str_replace(' ', '%20', get_the_title()).'&Body='.str_replace(' ', '%20', 'Here is the link to the article: '.get_permalink()).'" title="Email this article" class="s3-email hint--top"></a>'
 							);
 	return $service_markup_arr;

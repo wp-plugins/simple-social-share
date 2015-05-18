@@ -3,7 +3,7 @@
  * Plugin Name: Simple social share
  * Plugin URI: http://perials.com
  * Description: A simple plugin for displaying social media icons to share Post/Page content
- * Version: 2.0
+ * Version: 2.1
  * Author: Perials
  * Author URI: http://perials.com
  * License: GPL2
@@ -84,11 +84,16 @@ class simple_social_share{
 			<?php
 		}	
 	}
+	
+	public function s3_get_services() {
+		return array('facebook', 'twitter', 'googleplus', 'digg', 'reddit', 'linkedin', 'stumbleupon', 'tumblr', 'pinterest', 'email' );
+	}
 
 	public function s3_load_defaults(){
 
 		$s3_options['ss-select-style'] = 'horizontal-w-c-circular';
-		$s3_options['ss-available-services'] = array('facebook', 'twitter', 'googleplus', 'digg', 'reddit', 'linkedin', 'stumbleupon', 'tumblr', 'pinterest', 'email' );
+		//$s3_options['ss-available-services'] = array('facebook', 'twitter', 'googleplus', 'digg', 'reddit', 'linkedin', 'stumbleupon', 'tumblr', 'pinterest', 'email' );
+		$s3_options['ss-available-services'] = $this->s3_get_services();
 		$s3_options['ss-selected-services'] = $s3_options['ss-available-services'];
 		$s3_options['ss-select-position'] = array('before-content');
 		$s3_options['ss-show-on'] = array('pages', 'posts');
@@ -171,13 +176,16 @@ class simple_social_share{
 
 	}
 
-	public function s3_submenu_page(){
+	public function s3_submenu_page() {
 		?>
 		<div class="wrap">
 			<h2>Settings</h2>
 			<form method="POST" action="options.php">
 			<?php settings_fields('s3_options'); ?>
-			<?php $s3_options = get_option('s3_options'); ?>
+			<?php
+			$s3_options = get_option('s3_options');
+			$s3_options['ss-available-services'] = $this->s3_get_services();
+			?>
 			<?php admin_form($s3_options); ?>
 		</div>
 		<?php
